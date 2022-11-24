@@ -1,18 +1,126 @@
-html {
-  font-size: 14px;
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Patrick+Hand&display=swap');
+
+*{
+  font-family: 'Kaushan Script', cursive;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+:root{
+  --bs-body-color: #E4E9F7;
+  --sidebar-color: #FFEFD5;
+  --primary-color: #87CEFA;
+  --primary-color-light: #d0c9d0;
+  --togle-color: gray;
+  --text-color: #E9967A;
+  
+  --tran-03: all 0.3s easy ;
+  --tran-04: all 0.4s easy;
+  --tran-05: all 0.5s easy;
 }
 
-html {
+body{
+  height: 100vh ;
+  background: var(--bs-body-color);
+}
+
+.sidebar{
+  position: fixed;
+  padding:10px 14px;
+  top:0;
+  left:0;
+  height:92%;
+  width:300px;
+  background: var(--sidebar-color);
+}
+
+.close {
+  width:90px;
+}
+
+.sidebar header{
   position: relative;
-  min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
+.sidebar .image-text img {
+  width: 60px;
+  height: 60px ;
+  border-radius: 10px;
+  padding-left: 0;
+}
+
+.sidebar header .image-text{
+  display:flex;
+  align-items:center;
+}
+
+.sidebar .text {
+  color: black;
+}
+.sidebar .image {
+  min-width:60px;
+  display:flex;
+  align-items: center;
+}
+
+header .image-text .header-text {
+  display:flex;
+  flex-direction:column;
+} 
+.header-text .name {
+  font-weight: 500;
+}
+.header-text .slogan {
+  margin-top:-2px;
+}
+
+.sidebar header .toggle{
+  position: absolute;
+  top:50%;
+  right:-35px;
+  transform:translateY(-50%);
+  height: 25px;
+  width: 25px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+
+.sidebar li {
+  height:50px;
+  margin-top:10px;
+  list-style:none;
+  display: flex;
+  align-items: center;
+}
+
+.hr{
+  color: var(--togle-color);
+  height: 0.5%;
+}
+
+.sidebar #logout{
+ 
+}
+
+.close .text {
+  opacity: 0;
+}
+
+.index-menu .logo {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.index-menu .hr{
+  margin-bottom: 0;
+  margin-top:79px;
+  width:30%;
+  margin-left:38%;
 }

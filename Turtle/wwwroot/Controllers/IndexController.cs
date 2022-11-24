@@ -1,10 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
-
+using System.Diagnostics;
 namespace Turtle.wwwroot.Controllers;
 
-public class IndexController : Controller
+
+
+
+public class AboutController : Controller
 {
-    // GET
+  
+    
     public IActionResult Index()
     {
         return View();
