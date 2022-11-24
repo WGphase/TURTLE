@@ -19,7 +19,8 @@
   --tran-04: all 0.4s easy;
   --tran-05: all 0.5s easy;
 }
-
+@media(min-width:760px)
+{ 
 body{
   height: 100vh ;
   background: var(--bs-body-color);
@@ -30,8 +31,8 @@ body{
   padding:10px 14px;
   top:0;
   left:0;
-  height:92%;
-  width:300px;
+  height:100%;
+  width:10%;
   background: var(--sidebar-color);
 }
 
@@ -205,4 +206,21 @@ header .image-text .header-text {
   width:30%;
   margin-left:38%;
 }
+}
 
+@media (max-width: 500px){
+  body{
+    height: 100vh;
+    background: var(--bs-body-color);
+  }
+  .sidebar{
+    position: fixed;
+    padding:10px 14px;
+    top:0;
+    left:0;
+    height:10%;
+    width:100%;
+    background: var(--sidebar-color);
+  }
+
+}
