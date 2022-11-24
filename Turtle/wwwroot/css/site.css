@@ -103,9 +103,90 @@ header .image-text .header-text {
   height: 0.5%;
 }
 
-.sidebar #logout{
- 
+.sidebar .profile-button{
+  text-transform: uppercase;
+  position: relative;
+  border-radius: 0 !important;
+  border: none;
+  transition:all 0.3s ease 0s;
 }
+
+.sidebar .profile-button:hover,
+.sidebar .profile-button.active:hover{
+  color: #ffffff;
+}
+
+.sidebar .profile-button:before{
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  background-color:#2E0014;
+  width: 30%;
+  height: 4px;
+  transition:all 0.3s ease 0s;
+}
+
+.sidebar .profile-button:after{
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  right: 0;
+  background-color:#2E0014;
+  width: 30%;
+  height: 4px;
+  transition:all 0.3s ease 0s;
+}
+
+.sidebar .profile-button:hover:before,
+.sidebar .profile-button:hover:after,
+.sidebar .profile-button.active:before,
+.sidebar .profile-button.active:after{
+  width: 100%;
+}
+
+@media screen and (max-width: 575px){
+  .sidebar .profile-button{
+    margin-bottom: 50px !important;
+  }
+}
+
+.sidebar .animated-button{
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.sidebar .animated-button .chats-button{
+  transition: all 0.2s linear 0s
+}
+
+.sidebar .animated-button .chats-button:before{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30px;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0,1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+
+.sidebar .animated-button .chats-button:hover {
+   text-indent: 30px;}
+
+.sidebar .animated-button .chats-button:before {
+   transform: scale(1,1);
+   text-indent: 0;
+ }
+
 
 .close .text {
   opacity: 0;
@@ -124,3 +205,4 @@ header .image-text .header-text {
   width:30%;
   margin-left:38%;
 }
+
